@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #8f99a3;
+}
+
+.dashboard {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    background-color: #bcd5ed;
+    padding: 1em;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    border: 5px solid #748898;
+    border-radius: 1em;
+}
+
+.dashboard h1 {
+    text-align: center;
+}
+
+.imposters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.imposter {
+    cursor: pointer;
+    flex: 0 1 50%;
+    background-image: url(https://styles.redditmedia.com/t5_2oc1ic/styles/communityIcon_e18dltum4bm51.jpg?width=256&s=b4e842b1020b43df2eb3d8450cf8b1b2ba433988);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-size: 40px;
+    background-color: white;
+    padding: 1em 1em 1em 50px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px gray;
+}
+
+.imposter.voted {
+    background-color: gray;
+    position: relative;
+    opacity: 0.7;
+}
+
+.imposter.voted::after {
+    content: "I voted";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: inline-block;
+    font-family: "Comic Sans Ms";
+    color: red;
+}
+
+.imposters__voting {
+    text-align: right;
+}
